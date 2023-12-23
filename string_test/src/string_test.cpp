@@ -180,8 +180,10 @@ TEST_F(StringTest, EraseFunction)
     String erased4 = str.erase(0, 20);
     ASSERT_NE(String("Hello, World!"), erased4);
 
+    // TODO: 통합실패로 인해 임시로 변수를 따로 선언함
+    String str_2 = "Hello, World!";
     // Erase from out-of-bounds index
-    String erased5 = str.erase(15, 3);
+    String erased5 = str_2.erase(15, 3);
     ASSERT_EQ(String("Hello, World!"), erased5);
 
     String emptyStr;
